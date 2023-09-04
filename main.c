@@ -7,14 +7,14 @@ int estadisticasPersonajes[3][4]={{50,35,70,20},{20,40,95,60},{40,55,87,70}};
 int elegirPersonaje(){
     int personaje;
     printf("Elije tu personaje:\n1:Calonso\n2:Guty\n3.LaRata\n");
-    scanf("%d",&personaje);
-    personaje-=1;
+    scanf("%d", &personaje);
+    personaje -= 1;
     return personaje;
 }
 int menuPrincipal(int personaje){
     int opc;
     printf("Elija la opción que deseas realizar: \n1.Explorar\n2.Deck\n3.Bestiario\n4.Salir\n");
-    scanf("%d",opc);
+    scanf("%d", &opc);
     switch (opc){
     case 1:
         /* explorar */
@@ -26,10 +26,7 @@ int menuPrincipal(int personaje){
         /* Bestiario */
         break;
     case 4:
-        /* explorar */
-        break;
-    
-    default:
+        /* salir */
         break;
     }
 }
@@ -38,14 +35,14 @@ void menu(){
     int exit=0;
     int opc;
     int personajeSelect;
-    while(exit==0){
+    while(exit == 0){
         printf("Elija la opción que deseas realizar: \n");
-        if(save==0){
+        if(save == 0){
             printf("1. Nuevo juego\n2.Salir\n");
-            scanf("%d",&opc);
+            scanf("%d", &opc);
             switch (opc){
             case 1:
-               personajeSelect=elegirPersonaje();
+               personajeSelect = elegirPersonaje();
                 jugar(personajeSelect);
                 break;
             
@@ -60,7 +57,7 @@ void menu(){
             scanf("%d",&opc);
             switch (opc){
             case 1:
-                personajeSelect=elegirPersonaje();
+                personajeSelect = elegirPersonaje();
                 jugar(personajeSelect);
                 break;
             
