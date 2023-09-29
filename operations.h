@@ -2,6 +2,7 @@
 #include <locale.h>
 #include <string.h>
 
+#ifndef
 typedef struct Personaje
 {
     char nombre[20];
@@ -13,3 +14,6 @@ typedef struct Personaje
 
 
 struct Enemigo{};
+
+
+#endif
