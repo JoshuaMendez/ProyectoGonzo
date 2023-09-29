@@ -1,7 +1,7 @@
 all: programa
-programa: funciones Main
-	gcc -o Ejec Main.o  functions.o
-Main: Main.c
-	gcc -c Main.c
-funciones: funciones.c
+programa: main functions 
+	gcc -o Ejec main.o functions.o
+main: main.c
+	gcc -c main.c
+functions: functions.c
 	gcc -c functions.c
