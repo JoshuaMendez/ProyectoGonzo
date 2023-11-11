@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <locale.h>
 #include <string.h>
+#include <time.h>
 
-#ifndef
+#ifndef HEADER_FILE
+
 typedef struct Personaje
 {
     char nombre[20];
@@ -10,10 +12,16 @@ typedef struct Personaje
     int durezaFisica;
     int durezaMagica;
     int inteligencia;
-} Personaje;
+};
 
+// Estructura para representar una zona
+struct Zona {
+    char tipo[100];
+    // Otras propiedades de la zona
+};
 
-struct Enemigo{};
-
+int mostrarMenuInicial();
+int elegirPersonaje(struct Personaje personajes[]);
+void explorarZona(struct Zona *zona);
 
 #endif
