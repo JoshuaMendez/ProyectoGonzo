@@ -10,7 +10,7 @@ List crearListaDeck()
 
     return l;
 }
-
+//Complejidad O(1)
 Node *crearNodo(int data)
 {
     Node *n = (Node *)malloc(sizeof(Node));
@@ -19,7 +19,7 @@ Node *crearNodo(int data)
 
     return n;
 }
-
+//Complejidad O(1)
 void append(List *l, int data)
 {
     Node *n = crearNodo(data);
@@ -40,7 +40,8 @@ void append(List *l, int data)
 
     l->size += 1;
 }
-
+//siendo n el tamaño de la lista
+//Complejidad O(n)
 void print_list(List list, CartaData *cartasNum, Carta *cartasText)
 {
     int i = 0;
@@ -55,7 +56,8 @@ void print_list(List list, CartaData *cartasNum, Carta *cartasText)
     }
     printf("\n---------------------------------------\n");
 }
-
+//n = tamaño de la lista
+// Complejidad O(n)
 void pop(List *l)
 {
     if (l->size == 0)
@@ -79,7 +81,7 @@ void pop(List *l)
     }
     l->size -= 1;
 }
-
+// complejidad O(1)
 void shift(List *l, int data)
 {
     Node *n = crearNodo(data);
@@ -87,6 +89,8 @@ void shift(List *l, int data)
     l->head = n;
     l->size += 1;
 }
+
+// complejidad O(1)
 
 void add(List *l, int data, int index)
 {
@@ -115,6 +119,8 @@ void add(List *l, int data, int index)
     }
 }
 
+// complejidad O(1)
+
 int info(List l, int pos)
 {
     int count;
@@ -126,6 +132,8 @@ int info(List l, int pos)
     }
     return tmp->data;
 }
+// n = a pos
+// complejidad O(1)
 
 void miniDeck(int cartasNum[5], List l)
 {
@@ -143,6 +151,8 @@ void miniDeck(int cartasNum[5], List l)
         }
     }
 }
+// n = el tamaño del deck
+// complejidad O(n)
 
 void tienda(Carta cartasText[MAX_CARTAS], PersonajeData valoresPersonajes[MAX_PERSONAJES])
 {
@@ -186,7 +196,8 @@ void tienda(Carta cartasText[MAX_CARTAS], PersonajeData valoresPersonajes[MAX_PE
     printf("Ingrese una opcion: ");
     scanf("%d", &opcionZonaDescanso);
 }
-
+// n = veces que decida seguir comprando
+// complejidad O(n)
 void recuperar(PersonajeData valoresPersonajes[MAX_PERSONAJES])
 {
 
@@ -200,7 +211,8 @@ void recuperar(PersonajeData valoresPersonajes[MAX_PERSONAJES])
         printf("\nTus puntos de vida ya estan al maximo.\n");
     }
 }
-
+   
+// complejidad O(1)
 /*se hace todos los datos que veremmos en la terminal como las cartas el personaje principal etc...*/
 
 void datosInterfaz(Monster bestiarioText[MAX_MONSTERS], MonsterData bestiarioNum[MAX_MONSTERS],
@@ -254,3 +266,4 @@ void datosInterfaz(Monster bestiarioText[MAX_MONSTERS], MonsterData bestiarioNum
     }
     printf("\n6: Terminar turno\n\nSeleccione una opcion: ");
 }
+//complejidad O(1)
